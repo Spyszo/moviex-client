@@ -1,0 +1,48 @@
+.trailerWindow {
+    margin: 0 auto;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(calc(-100vh + 500px));
+
+    @media (max-width: 1920px) {
+        transform: translateY(calc(-100vh + 400px));
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: #20202098;
+        z-index: -1;
+    }
+
+    .trailer {
+        position: relative;
+        width: 1280px;
+        margin: 20px;
+
+        &:after {
+            content: '';
+            display: block;
+            padding-top: 56.25%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.backdrop_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -99;
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(5px);
+        transition: 1s;
+        z-index: -98;
+    }
+
+    img.fadeOut {
+        animation: fadeOut;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        z-index: -97;
+    }
+
+
+
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 23, 31, 0.712);
+        z-index: 10;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}

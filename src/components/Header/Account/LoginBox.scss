@@ -1,0 +1,125 @@
+
+    .loginBox {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        max-width: 350px;
+        width: 100%;
+        padding: 20px;
+        height: fit-content;
+        background-color: rgba(39, 39, 39, 0.952);
+        backdrop-filter: blur(5px) saturate(500%) brightness(200%);
+        border-radius: 20px;
+        animation-fill-mode: forwards;
+        animation: loginBox_fadeIn .25s;
+        transition: .15s ease-out;
+        overflow: hidden;
+
+        &.closeAnimation { 
+            &.loginBox {
+                animation-fill-mode: forwards;
+                animation: loginBox_fadeOut .25s;
+            }
+        }
+
+        .login {
+            transition: .15s ease-out ;
+            &.moveLeft {
+                transform: translateX(-110%);
+            }
+        }
+        .forgotPasswordBox {
+            transition: .15s ease-out;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: calc(100% - 40px);
+            transform: translateX(200%);
+            &.moveLeft {
+                transform: translateX(20px);
+            }
+        }
+
+
+
+        button#forgot_password {
+            display: block;
+            margin-left: auto;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: rgb(180, 180, 180); 
+            background-color: transparent;
+        }
+
+        button#submit_login { 
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            background-color: rgba(53, 53, 53, 0.651);
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .15s ease-out;
+
+            &:hover {
+                background-color: rgba(29, 29, 29, 0.685);
+            }
+        }
+
+        p {
+            font-weight: 300;
+            text-align: center;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: .15s ease-out;
+
+            &:hover {
+                color: rgb(202, 202, 202);
+            }
+        }
+
+        button#switch_register {
+            display: block;
+            width: 130px;
+            padding: 7px;
+            background-color: rgba(53, 53, 53, 0.651);
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: .15s ease-out;
+
+            &:hover {
+                background-color: rgba(29, 29, 29, 0.685);
+            }
+        }
+        
+    }
+
+    @keyframes loginBox_fadeIn {
+        0% {
+            transform: scale(80%);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes loginBox_fadeOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(80%);
+            opacity: 0;
+        }
+    }

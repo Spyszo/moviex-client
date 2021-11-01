@@ -1,0 +1,11 @@
+.tvSeriesCollection { 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+}

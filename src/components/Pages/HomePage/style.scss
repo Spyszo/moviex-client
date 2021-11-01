@@ -1,0 +1,74 @@
+.movie-list, .tvSeries-list {
+    display: flex;
+    margin: 0 20px;
+    margin-bottom: 50px;
+    padding-top: 70px;
+    position: relative;
+    user-select: none;
+
+    .leftArrow {
+        position: absolute;
+        left: 0;
+        top: 70px;
+        height: calc(100% - 70px);
+        color: rgba(219, 219, 219, 0.486);
+        width: 100px;
+        background: linear-gradient(90deg, rgb(15, 15, 15) 0%,rgba(0, 0, 0, 0)  100%);
+        font-size: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        border-radius: 20px 0 0 20px;
+        cursor: pointer;
+    }
+
+    .rightArrow {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        height: calc(100% - 70px);
+        width: 100px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(26, 26, 26) 100%);
+        font-size: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+        color: rgba(219, 219, 219, 0.486);
+    }
+
+    .list {
+        display: flex;
+        overflow-x: hidden;
+        background-color: rgba(0, 0, 0, 0.048);
+        border-radius: 20px;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.mobile {
+            overflow-x: scroll;
+        }
+    }
+    
+    .sectionTitle {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        font-size: 30px;
+        white-space: nowrap;
+        font-weight: 900;
+        opacity: .4;
+
+        @media (max-width: 820px) {
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+        }
+    }
+}
