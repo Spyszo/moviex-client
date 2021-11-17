@@ -18,4 +18,10 @@ Aplikacja Moviex pozwala przeglądać oraz wyszukiwać filmy i seriale. Można j
 
 - REACT_APP_TMDB_API_KEY=api wygenerowane na stronie tmdb
 
+# Do zrobienia
+- listy użytkowników
+- dodawanie do list z poziomu okna szczegółów filmu/serialu
+- dodawanie do obejrzanych
+- udostępnianie list
+
 Do poprawnego działania aplikacji wymagany jest serwer [Moviex-Api](https://github.com/Spyszo/moviex-api)
