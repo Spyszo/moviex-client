@@ -1,5 +1,7 @@
 # Moviex
 
+[DEMO](https://moviex.wesonline.site)
+
 Aplikacja Moviex pozwala przeglądać oraz wyszukiwać filmy i seriale. Można je dodawać do własnej kolekcji. Na stronie głównej pokazane są aktualnie popularne filmy/seriale. Dane i listy pobierane są z api TMDB.
 
 # Biblioteki
