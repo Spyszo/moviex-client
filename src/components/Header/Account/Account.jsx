@@ -35,7 +35,7 @@ const Account = () => {
         const verifyJWT = async () => {
             const loggedIn = cookies.get("loggedIn")
             if (loggedIn === "true") {
-                await axios.post("http://localhost:5000/api/auth/verify",{},{
+                await axios.post(`${REACT_APP_API}/api/auth/verify`,{},{
                     withCredentials: true,
                     credentials: 'include',
                 })
@@ -47,7 +47,7 @@ const Account = () => {
                             data: res.user
                         }) 
 
-                        axios.get("http://localhost:5000/api/collection", {
+                        axios.get(`${REACT_APP_API}/api/collection`, {
                             withCredentials: true
                         })
                             .then(res=>res.data)
@@ -119,7 +119,7 @@ const Account = () => {
     }
 
     const handleLogOut = () => {
-        axios.post("http://localhost:5000/api/auth/logout", {}, {
+        axios.post(`${REACT_APP_API}/api/auth/logout`, {}, {
             withCredentials: true,
             credentials: "include"
         })
