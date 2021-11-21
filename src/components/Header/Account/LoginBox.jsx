@@ -59,7 +59,8 @@ const LoginBox = (props) => {
             email, password
         }, {
             withCredentials: true,
-            credentials: "include"
+            credentials: "include",
+            origin: "https://moviex.wesonline.site"
         })
             .then(res => res.data)
             .then(res => {
