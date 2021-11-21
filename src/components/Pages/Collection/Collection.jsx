@@ -22,7 +22,7 @@ const Collection = () => {
     const { movieCollection } = useSelector(state => state);
 
     useEffect(()=> {
-        axios.get(`${REACT_APP_API}/api/collection`, {
+        axios.get(`${process.env.REACT_APP_API}/api/collection`, {
             withCredentials: true,
             credentials: "include"
         })

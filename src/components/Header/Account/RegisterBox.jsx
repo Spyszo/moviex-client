@@ -64,7 +64,7 @@ const RegisterBox = (props) => {
         if (errorsCopy.name || errorsCopy.email  || errorsCopy.password  || errorsCopy.passwordCheck )
             return
 
-        axios.post(`${REACT_APP_API}/api/auth/register`, {
+        axios.post(`${process.env.REACT_APP_API}/api/auth/register`, {
             email, password, passwordCheck, displayName: name
         })
             .then(res => res.data)

@@ -12,7 +12,7 @@ const ActivateAccount = () => {
     
     const token = query.get("token")
     if (token) {
-        axios.post(`${REACT_APP_API}/api/account/activateAccount`, {activationToken: token})
+        axios.post(`${process.env.REACT_APP_API}/api/account/activateAccount`, {activationToken: token})
             .then(res => res.data)
             .then(res => {
                 enqueueSnackbar(res.message)

@@ -55,7 +55,7 @@ const LoginBox = (props) => {
         const email = e.target[0].value
         const password = e.target[1].value
 
-        axios.post(`${REACT_APP_API}/api/auth/login`, {
+        axios.post(`${process.env.REACT_APP_API}/api/auth/login`, {
             email, password
         }, {
             withCredentials: true,
