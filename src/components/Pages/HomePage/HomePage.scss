@@ -1,8 +1,11 @@
 .homePage {
     width: 100%;
     overflow-x: clip;
-    position: absolute;
+    position: relative;
     top: 0;
+    padding-top: 80px;
+    height: 100vh;
+    overflow-y: hidden;
     //height: 100%;
 
     .switch {
@@ -62,6 +65,7 @@
 
     .movies {
         width: 100%;
+        top: 180px;
         left: 0;
         transition: .15s ease-out;
         height: fit-content;
@@ -75,7 +79,7 @@
     .tvseries {
         width: 100%;
         position: absolute;
-        top: 100px;
+        top: 180px;
         left: 100%;
         transition: .15s ease-out;
 
